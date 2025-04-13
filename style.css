@@ -1,0 +1,417 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
+body {
+  padding: 0;
+  margin: 0;
+}
+/* menu */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navigasi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: linear-gradient(to right, #ffffff, #e0f7ff);
+  color: #333;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h2 {
+  font-size: 24px;
+  color: #1e90ff;
+  letter-spacing: 1px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #1e90ff;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+.menu ul li a:hover {
+  color: #1e90ff;
+}
+
+@media (max-width: 768px) {
+  .navigasi {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 30px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+}
+/* end menu */
+
+
+/* home */
+.banner {
+  background: linear-gradient(135deg, #8fd8d2, #cdebf2);
+    height: 700px;
+    text-align: center;
+}
+
+.banner img{
+    border-radius: 100px;
+    height: 170px;
+    border: 6px solid white;
+    margin-top: 150px;
+    background-color: white;
+    
+}
+
+.banner h1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/* end home */
+
+
+/* led  START */
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .led {
+    text-align: center;
+    color: #555;
+    align-content: center;
+  }
+
+  .led h1 {
+    margin-top: 80px;
+  }
+
+  .led1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 150px;
+  }
+  .led2{
+  background: linear-gradient( peachpuff, rgb(245, 230, 217));
+  height: 700px;
+}
+
+  .checkbox-wrapper-5 {
+    background-color: #ececec;
+    width: 220px;
+    height: 150px;
+    padding: 25px 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+  }
+
+  .checkbox-wrapper-5:hover {
+    transform: translateY(-8px);
+    background-color: #dcdcdc;
+  }
+
+  .checkbox-wrapper-5 p {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #444;
+  }
+
+  .check {
+    --size: 40px;
+    position: relative;
+    /* background: linear-gradient(90deg, #ff9ec4, #ffa6f2); */
+    font-size: var(--size);
+    display: inline-block;
+    
+  }
+
+  .check input[type="checkbox"],
+  .check label,
+  .check label::before,
+  .check label::after {
+    appearance: none;
+    border: 0;
+    border-radius: var(--size);
+    transition: .3s ease;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .check label {
+    width: calc(2.2 * var(--size));
+    height: var(--size);
+    background: #d7d7d7;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: var(--size);
+    position: relative;
+  }
+
+  .check input[type="checkbox"] {
+    position: absolute;
+    width: calc(.8 * var(--size));
+    height: calc(.8 * var(--size));
+    top: calc(.1 * var(--size));
+    left: calc(.1 * var(--size));
+    background: white;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.25);
+    z-index: 2;
+  }
+
+  .check input[type="checkbox"]:checked {
+    left: calc(1.3 * var(--size));
+  }
+
+  .check input[type="checkbox"]:checked + label {
+    background: #bbb;
+  }
+
+  .check label::before,
+  .check label::after {
+    content: "· ·";
+    position: absolute;
+    color: #888;
+    font-family: "Times New Roman", serif;
+    font-size: calc(.6 * var(--size));
+    left: calc(.15 * var(--size));
+    top: calc(.5 * var(--size));
+    transform-origin: 0 0 calc(-0.5 * var(--size));
+  }
+
+  .check label::after {
+    content: "●";
+    font-size: calc(.2 * var(--size));
+    top: calc(.65 * var(--size));
+    left: calc(.2 * var(--size));
+  }
+
+  .check input[type="checkbox"]:checked + label::before,
+  .check input[type="checkbox"]:checked + label::after {
+    left: calc(1.55 * var(--size));
+    top: calc(.4 * var(--size));
+    transform: rotateY(360deg);
+  }
+
+  @media (max-width: 768px) {
+    .led1 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+/* led  END */
+
+/* jarak start */
+.jarak1{
+    background: linear-gradient(135deg,antiquewhite, rgb(245, 237, 226));
+    height: 700px;
+}
+.jarak2{
+    text-align: center;
+    color: #555;
+    align-content: center;
+}
+.jarak2 h1{
+    margin-top: 80px;
+}
+
+.jarak{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+}
+.distance-widget {
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 700px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.distance {
+  font-size: 2.5rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #28a745;
+}
+
+.progress-bar-container {
+  margin-top: 1rem;
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.refresh {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.refresh:hover {
+  background: #0056b3;
+}
+
+/* end jarak */
+
+
+/*widget start*/
+.DHT{
+    text-align: center;
+    color: #555;
+    align-content: center;
+}
+.DHT h1{
+    margin-top: 80px;
+}
+.widget_container{
+    background: linear-gradient(135deg, #f8b2cd, #e2bccb);
+    height: 700px;
+}
+.widget1{
+    margin: 40PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; 
+}
+
+.widget {
+    display: flex;
+    height: 300px;
+    width: 600px;
+    flex-wrap: wrap;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3),
+      0 17px 17px 0 rgba(0, 0, 0, 0.15);
+    align-content: center;
+
+  }
+    .weatherIcon {
+    flex: 1 100%;
+    height: 60%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: #cbe2f3;
+    font-family: weathericons;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 100px; 
+  }
+    i {
+    padding-top: 30px;
+    }
+
+.weatherInfo {
+    flex: 0 0 70%;
+    height: 40%;
+    background: #d8bc84;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    }
+
+.temperature {
+      flex: 0 0 40%;
+      width: 100%;
+      font-size: 65px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .description {
+      flex: 0 60%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .weatherCondition {
+        text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 100;
+      }
+
+      .location {
+        font-size: 15px;
+      }
+    .humid {
+        flex: 0 0 30%;
+        height: 40%;
+        background: #6e0427;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        font-size: 30px;
+        font-weight: 800;
+    }
